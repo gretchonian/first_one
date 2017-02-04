@@ -12,6 +12,7 @@
   <body>
     <header class="row">
       <div class="col-3">
+      <%= link_to root_path, class: 'logo' do %>
          <div class="circle">
           <br />
            YOLO
@@ -20,12 +21,13 @@
           <br />
            OMG
          </div>
+      <% end %>
       </div>
       <div class="col-4 slogan">
         Splurting out random Ghandi quotes for wisdom throughout your day.
       </div>
       <div class="col-5 links">
-        <%= link_to 'Contribute', '#' %>
+        <%= link_to 'Contribute', new_quote_path %>
         <%= link_to 'About', '#' %>
       </div>
 
@@ -39,21 +41,21 @@
       <%= yield %>
     </div>
 
-    <div class="footer">
-      <div class="container">
-        <div class="row">
-        <div class="col-6">
-          <%= link_to "This isn't enough, I need more", "#", class: 'next-quote' %>
-        </div>
-        <div class="col-6 footer-blurb">
-          Something clever here I suppose<a href="#"></a>
-          <div class="clear"/>
-          Want to build yor own Splurty Web App - <a href="http://thefirehoseproject.com">Learn how to code here</a>
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+          <div class="col-6">
+            <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
+          </div>
+          <div class="col-6 footer-blurb">
+            Something clever here I suppose<a href="#">*</a>
+            <br />
+            Something really clever here<a href="#">*</a>
           </div>
         </div>
-          <p class="text-muted">Place sticky footer content here.</p>
         </div>
       </div>
     </div>
   </body>
+
 </html>
