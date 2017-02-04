@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <style>
-@import url('https://fonts.googleapis.com/css?family=Dosis');
-</style>
+
     <title>Splurty</title>
     <%= csrf_meta_tags %>
 
@@ -37,6 +35,25 @@
 
     <br class="clear" />
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+        <div class="col-6">
+          <%= link_to "This isn't enough, I need more", "#", class: 'next-quote' %>
+        </div>
+        <div class="col-6 footer-blurb">
+          Something clever here I suppose<a href="#"></a>
+          <div class="clear"/>
+          Want to build yor own Splurty Web App - <a href="http://thefirehoseproject.com">Learn how to code here</a>
+          </div>
+        </div>
+          <p class="text-muted">Place sticky footer content here.</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
