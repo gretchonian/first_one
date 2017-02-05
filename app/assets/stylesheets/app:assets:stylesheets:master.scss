@@ -64,6 +64,11 @@ font-family: 'Dosis', sans-serif;
 font-weight: 700;
 padding-top: 10px;
 }
+h2 span {
+  font-family: 'Dosis', sans-serif;
+  font-weight: normal;
+  font-size: 25px;
+}
 
 html {
   position: relative;
@@ -73,6 +78,13 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+h2 span{
+  color: #dddddd;
+}
+.modal {
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
