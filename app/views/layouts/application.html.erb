@@ -16,16 +16,16 @@
       <%= link_to root_path, class: 'logo' do %>
          <div class="circle">
           <br />
-           YOLO
+           Chuck
           <br />
-            LOL
+            Norris
           <br />
-           OMG
+           Quotes
          </div>
       <% end %>
       </div>
       <div class="col col-sm-4 hidden-xs-down slogan">
-        Splurting out random Ghandi quotes for wisdom throughout your day.
+        Splurting out random quotes from Chuck Norris for courage and wisdom throughout your day.
       </div>
       <div class="col-10 offset-1 offset-sm-0 col-sm-5 links">
             <!-- Button trigger modal -->
@@ -49,9 +49,9 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for Quote.new do |f| %>
-        <%= f.input :saying, label: "What is the saying you want to add?", placeholder: "Chuck can speak in braille." %>
+        <%= f.input :saying, label: "What is the saying you want to add?", placeholder: "Chuck Norris can hear sign language." %>
           <br />
-        <%= f.input :author, label: "Who is the author of the quote?" %>
+        <%= f.input :author, label: "Who is the author of the quote?", placeholder: "Chuck Norris" %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -82,9 +82,9 @@
             <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
           </div>
           <div class="col-12 col-sm-6 footer-blurb">
-            Something clever here I suppose<a href="#">*</a>
+            <a href="#">Hacked by GtotheJoyce</a>
             <br />
-            Something really clever here<a href="#">*</a>
+            <a href="http://www.memecenter.com/search/Chuck%20Norris">If pics make you laugh more than jokes</a>
           </div>
         </div>
         </div>
