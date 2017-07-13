@@ -13,16 +13,16 @@
   <body>
     <header class="row">
       <div class="col-3">
-      <%= link_to root_path, class: 'logo' do %>
-         <div class="circle">
-          <br />
-           Chuck
-          <br />
-            Norris
-          <br />
-           Rules
-         </div>
-      <% end %>
+        <%= link_to root_path, class: 'logo' do %>
+           <div class="circle">
+            <br />
+             Chuck
+            <br />
+              Norris
+            <br />
+             Rules
+           </div>
+        <% end %>
       </div>
       <div class="col col-sm-4 hidden-xs-down slogan">
         Splurting out random Chuck Norris humor for courage and wisdom throughout your day.
@@ -33,39 +33,31 @@
            &nbsp;&nbsp;
         <%= link_to 'About', about_path %>
       </div>
-
-
-
     </header>
-
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-
-
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel">Contribute Your Quote</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Contribute Your Quote</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <%= simple_form_for Quote.new do |f| %>
+            <div class="modal-body">
+              <%= f.input :saying, label: "What is the saying you want to add?", placeholder: "Chuck Norris can hear sign language." %>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <%= f.submit 'Create', class: 'btn btn-danger' %>
+            </div>
+          <% end %>
+        </div>
       </div>
-      <%= simple_form_for Quote.new do |f| %>
-      <div class="modal-body">
-        <%= f.input :saying, label: "What is the saying you want to add?", placeholder: "Chuck Norris can hear sign language." %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-         <%= f.submit 'Create', class: 'btn btn-danger' %>
-      </div>
-      <% end %>
     </div>
-  </div>
-</div>
 
     <hr />
-
     <br class="clear" />
 
     <div class="container">
@@ -77,21 +69,21 @@
       <%= yield %>
     </div>
 
-      <div class="footer">
-        <div class="container">
-          <div class="row">
+    <div class="footer">
+      <div class="container">
+        <div class="row">
           <div class="col-12 col-sm-6">
             <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
           </div>
           <div class="col-12 col-sm-6 footer-blurb">
-            <a href="#">Hacked by GtotheJoyce</a>
+            <a href="http://www.zigzagwebdesigns.com">Website Creator: ZigZagDesign</a>
             <br />
             <a href="http://www.memecenter.com/search/Chuck%20Norris">If pics make you laugh more than jokes</a>
           </div>
         </div>
-        </div>
       </div>
     </div>
+  
   </body>
 
 </html>
